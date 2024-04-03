@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Post Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 2vh;
+        }
+
+        .container {
+            background-color: #1b1b1b;
+            margin: 0;
+        }
+
+        .card {
+            margin-left: 2vh;
+            background-color: #3a3a3a;
+            width: 95vw;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .card-title {
+            color: white;
+        }
+
+        #pie-chart {
+            color: white;
+        }
+
+        #postTable th,
+        #postTable td {
+            color: #ffffff;
+            border: 1px solid white;
+            padding: 8px;
+        }
+
+        #postTable {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title">&#9776; <%= user.username %> 's Posts </p>
+                        <a href="/pdf/postUserAnalytics/?data=<%= encodeURIComponent(JSON.stringify(analyticsData)) %>" class="btn btn-primary mt-3">PDF</a>
+
+                        <table id="postTable">
+                            <thead>
+                                <tr>
+                                    <th>Post ID</th>
+                                    <th>Content Type</th>
+                                    <th>Content URL</th>
+                                    <th>Content Description</th>
+                                    <th>Like Count</th>
+                                    <th>Comment Count</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const post of analyticsData) { %>
+                                    <tr>
+                                        <td>
+                                            <%= post.postId %>
+                                        </td>
+                                        <td>
+                                            <%= post.content_type %>
+                                        </td>
+                                        <td>
+                                            <%= post.content_url %>
+                                        </td>
+                                        <td>
+                                            <%= post.content_description %>
+                                        </td>
+                                        <td>
+                                            <%= post.like_count %>
+                                        </td>
+                                        <td>
+                                            <%= post.comment_count %>
+                                        </td>
+                                        <td>
+                                            <%= post.timestamp %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

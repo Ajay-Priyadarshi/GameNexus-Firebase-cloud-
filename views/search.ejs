@@ -1,0 +1,47 @@
+<!-- search.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Social Media Search</title>
+    <link rel="stylesheet" href="/styleSearch.css"> <!-- Update the path based on your project structure -->
+</head>
+
+<body>
+    <form action="/search" method="GET">
+        <div class="search-container">
+
+            <input type="text" name="searchTerm" placeholder="Search A Player">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <div class="search-results">
+        <% if (results && results.length> 0) { %>
+            <% for (let i=0; i < results.length; i++) { %>
+                <a href="/profile/<%= results[i]._id %>">
+                    <div class="result-item">
+                        <img class="img-i" src="<%= results[i].userPhoto %>" alt="<%= results[i].username %>">
+                        <div class="result-details">
+                            <h3>
+                                <%= results[i].username %>
+                            </h3>
+                            <p id="usertag">@<%= results[i].username %> • <%= results[i].accountType %>
+                            </p>
+                            <p>
+                                <%= results[i].bio %>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+                    <% } else { %>
+                        <p>No results found</p>
+                        <% } %>
+    </div>
+</body>
+
+</html>

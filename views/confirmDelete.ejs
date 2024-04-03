@@ -1,0 +1,21 @@
+<!-- views/confirmDelete.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Confirm Delete</title>
+</head>
+
+<body>
+    <h2>Confirm Delete</h2>
+    <p>Are you sure you want to delete the account of <%= user.username %>?</p>
+    <form action="/userAnalytics/userList/delete/<%= user._id %>" method="post">
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="/userAnalytics/userList">No, go back</a>
+</body>
+
+</html>

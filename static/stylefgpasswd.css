@@ -1,0 +1,90 @@
+body {
+    font-family: 'Minecraft';
+    background: url('../assets/main.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+
+
+
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: calc(100% - 16px);
+    background-color: rgba(254, 237, 1, 255);
+    outline: none;
+    border-radius: 10px;
+    border-style: double;
+    border-color: white;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+}
+
+button {
+    font-family: 'Minecraft';
+    width: 96%;
+    padding: 10px;
+    background-color: #645F7D;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+
+.back-to-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-to-login a:hover {
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}

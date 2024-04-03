@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styleProfile.css">
+</head>
+
+<body>
+
+    <div class="profile-container11">
+        <div class="profile-header">
+            <img class="main-i" src="<%= user.userPhoto %>" alt="Profile Picture">
+            <div class="profile-info">
+                <h1 id="usrname">
+                    <%= user.username %>
+                </h1>
+                <div class="usertype">
+                    <p>
+                        <%= user.accountType %>
+                    </p>
+                </div>
+                <div class="counts" style="width: 90%;">
+                    <table>
+                        <tr>
+                            <th class="Followers" id="data">
+                                <a href="/follow/getFollowers %>">Followers: <%= user.followersCount %></a>
+                            </th>
+                            <th class="Followers" id="data">
+                                <a href="/follow/getFollowing %>">Following: <%= user.followingCount %></a>
+                            </th>
+                            <th class="Post" id="data">Post: <%= user.postCount %>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="multiline-text">
+            <label id="ach"><b>Achievement bio:</b>
+                <%= user.bio %>
+            </label><br><br><br>
+            <label id="req"><b>Requirements:</b>
+                <%= user.requirements %>
+            </label><br><br>
+        </div>
+
+        <div class="npost">
+            <a href="/post/new" id="newPostButton">+ New Post</a>
+            <a href="/follow/getRequests" id="newPostButton">+ Follow Requests (<%= user.followRequestCount %>)</a>
+        </div>
+
+        <div class="profile-container">
+            <h2># PROFILE GRID</h2>
+        </div>
+        <br>
+        <div class="posts">
+            <% userPosts.forEach(post=> { %>
+                <div class="profile-container">
+                    <div class="profile-i">
+                        <img class="img-i" src="<%= user.userPhoto %>"
+                            alt="<%= user.username %>">
+                        <div class="username">
+                            <%= user.username %>
+                        </div>
+                    </div>
+                    <div class="post">
+
+                        <% if (post.Content_Type==='image' ) { %>
+                            <!-- Render image element -->
+                            <div class="post-img">
+                                <img src="<%= post.Content_URL %>" alt="<%= user.username %>'s Post">
+                            </div>
+                            <% } else if (post.Content_Type==='video' ) { %>
+                                <!-- Render video element -->
+                                <div class="post-video">
+                                    <video controls>
+                                        <source src="<%= post.Content_URL %>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div class="post-actions">
+                        <a href="/like/<%= post._id %>">
+                            <i class="fas fa-heart" id="like-btn"> <%= post.Like_Count %></i>
+                        </a>
+    
+                        <a href="#" onclick="postComment('<%= post._id %>')" id="cmt-btn">
+                            <i class="fas fa-comment">
+                                <%= post.Comment_Count %>
+                            </i>
+                        </a>
+                        <a href="#" class="delete-btn" onclick="window.location.href ='/post/delete/<%= post._id %>';">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <% }); %>
+                
+        </div>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>

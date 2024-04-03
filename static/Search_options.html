@@ -1,0 +1,68 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Video Showcase</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y:unset;
+            color: white;
+            font-family: 'Minecraft';
+         
+        }
+
+        .showcase {
+            text-align: center;
+        }
+
+        #info {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="showcase">
+        <h3 id="info">PARTICIPATE IN TOURNAMENTS</h3>
+        <video autoplay loop muted>
+            <source src="../assets/Tournament.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="showcase">
+        <h3 id="info">SHOWCASE YOUR GAMEPLAY</h3>
+        <video autoplay loop muted>
+            <source src="../assets/Gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="showcase">
+        <h3 id="info">SHARE RAW POV</h3>
+        <video autoplay loop muted>
+            
+            <source src="../assets/RawPov.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 class="neon" data-text="U">GA<span class="flicker-slow">ME </span>NE<span class="flicker-fast">X</span>US</h1>
+  <br>
+
+  <form action="/auth/login" method="post">
+
+    <div class="username">
+      <label for="username">USERNAME:</label>
+      <input type="text" id="usernamebox" name="username" required>
+      <br>
+    </div>
+
+    <div class="password">
+      <label for="password">PASSWORD:</label>
+      <input type="password" id="passwordbox" name="password" required>
+      <br>
+    </div>
+
+    <a href="Homepage.html">
+      <button type="submit">LOGIN</button>
+    </a>
+
+  </form>
+
+  <div class="Register">
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+    <a href="forgetPassword.html">Forgot Password?</a>
+    <p>Continue As <a href="#">Guest</a></p>
+  </div>
+
+</body>
+
+</html>

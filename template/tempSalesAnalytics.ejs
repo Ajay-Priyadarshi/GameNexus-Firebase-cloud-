@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: "League";
+            background-color: #1b1b1b;
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            color: #000000;
+            font-family: "Space Monkey";
+            margin-top:4vh;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 2vh;
+        }
+
+        .container {
+            background-color: #000000;
+        }
+
+        .card {
+            background-color: #000000;
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+        }
+
+        .card-title {
+            color: rgb(0, 0, 0);
+        }
+
+        #pie-chart {
+            color: rgb(0, 0, 0);
+        }
+
+        table {
+            width: 100%;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+<h1>GameNexus</h1>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Sales Analytics</h2>
+                        <p>Date: <%= currentDate %>
+                           Time: <%= currentTime %></p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Plan Name</th>
+                                    <th>Quantity Sold</th>
+                                    <th>Price</th>
+                                    <th>Total Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const analytics of analyticsData) { %>
+                                    <tr>
+                                        <td><%= analytics.planName %></td>
+                                        <td><%= analytics.quantitySold %></td>
+                                        <td><%= analytics.price %></td>
+                                        <td><%= analytics.totalRevenue %></td>
+                                    </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/auth/styleRegister.css">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Dark Theme Form with Photo</title>
+    <!-- <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must contain at least one capital letter, one number, and one symbol (!@#$%^&*()_+)");
+                return false;
+            }
+            return true;
+        }
+    </script> -->
+</head>
+
+<body>
+    <h1 class="details">ENTER DETAILS</h1>
+
+    <form method="post" action="/auth/register" enctype="multipart/form-data" onsubmit="return validatePassword()">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="accountType">User Type:</label>
+        <select name="accountType" id="accountType" required>
+            <option value="PLAYER">PLAYER</option>
+            <option value="SPONSOR">SPONSOR</option>
+            <option value="EVENT ORGANIZER">EVENT ORGANIZER</option>
+        </select>
+
+        <label for="bio">Bio:</label>
+        <input type="text" id="bio" name="bio" required>
+
+        <label for="securityQuestion">Security Question:</label>
+        <input type="text" id="securityQuestion" name="securityQuestion" required>
+
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" name="answer" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="accountType" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+           
+        </select>
+
+        <label for="photoInput" id="photoLabel">Upload Photo</label>
+        <input type="file" id="photoInput" name="photo" accept="image/*">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="previous">
+        <a href="login.html">
+            GO BACK
+        </a>
+    </div>
+</body>
+
+</html>

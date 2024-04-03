@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Post Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            font-family: 'League';
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden; /* Hide vertical overflow */
+        }
+
+        ::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-verticle {
+  width: 0px; /* Width of the scrollbar */
+}
+
+        .card-title {
+            font-size: 2vh;
+        }
+
+        .container {
+            
+            background-color: #1b1b1b;
+           ;
+        }
+
+.row{
+    width:172vw;
+  color: white;
+  
+}
+
+
+
+        .card {
+            background-color: #3a3a3a;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .card-title {
+            color: white;
+            width: 90%;
+        }
+
+        #pie-chart {
+            color: white;
+        }
+
+        #postTable th,
+        #postTable td {
+            color: white;
+            border: 1px solid white;
+            padding: 8px;
+        }
+
+        #postTable {
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            margin-top: 20px;
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        a:hover{
+            color: rgb(4, 255, 0);
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title">&#9776; Post Analytics</p>
+                        <table id="postTable">
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Post Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% let totalPosts = 0; %>
+                                <% for (const user in analyticsData) { %>
+                                    <tr>
+                                        <td><a href="/postAnalytics/user/<%= user %>"><%= user %></a></td>
+                                        <td><%= analyticsData[user] %></td>
+                                    </tr>
+                                    <% totalPosts += analyticsData[user]; %>
+                                <% } %>
+                                <tr>
+                                    <td>Total Posts</td>
+                                    <td><%= totalPosts %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <a href="/pdf/postAnalytics?data=<%= encodeURIComponent(JSON.stringify(analyticsData)) %>" class="btn btn-primary mt-3">PDF</a><br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

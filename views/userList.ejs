@@ -1,0 +1,144 @@
+<!-- userlist.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Two-Segment User List</title>
+    <style>
+        body {
+            font-family: 'League';
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: #fff;
+            
+        }
+
+        ::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+}
+
+        .segment {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .search-bar {
+            font-family: 'League';
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: #156aea;
+            border-style: outset;
+            border-radius: 10px;
+        }
+
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+            color: black;
+            margin: 0;
+         
+        }
+
+        .user-list-item {
+            background-color: #fff;
+           
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            border: #ea6e15 3px;
+            border-style: outset;
+            border-radius: 10px;
+        }
+
+        .user-list-item:hover {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            border: #ff0000 3px;
+            border-style: outset;
+            border-radius: 10px;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgb(72, 68, 68);
+            color: #fff;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+ 
+        .delete-btn:hover {
+ 
+            background-color: rgb(255, 0, 0);
+ 
+        }
+
+
+        a {
+            margin-left: 48%;
+            margin-bottom: 5vh;
+            background-color: black;
+            padding: 5px;
+        }
+
+        .op {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="segment">
+        <h2>Active Users</h2>
+        <p>Number of Active Users: <%= activeUsers.length %>
+        </p>
+        <input type="text" class="search-bar" placeholder="Search users...">
+        <ul class="user-list">
+            <% for (const user of activeUsers) { %>
+                <li class="user-list-item">
+                    <%= user.username %> • <%= user.accountType %>
+                            <a href="#" class="delete-btn"
+                                onclick="window.location.href ='/userAnalytics/delete/<%= user._id %>';">
+                                <i class="fas fa-trash"></i></a>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+    <div class="segment">
+        <h2>Deactive Users</h2>
+        <p>Number of Deactive Users: <%= inactiveUsers.length %>
+        </p>
+        <input type="text" class="search-bar" placeholder="Search users...">
+        <ul class="user-list">
+            <% for (const user of inactiveUsers) { %>
+                <li class="user-list-item">
+                    <%= user.username %> &nbsp; • &nbsp; <%= user.accountType %>
+                            <a href="#" class="delete-btn" onclick="window.location.href ='/userAnalytics/activate/<%= user._id %>';">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <!-- <button><a class="op" href="/admin/dashboard">Go Back</a></button> -->
+
+</body>
+
+</html>

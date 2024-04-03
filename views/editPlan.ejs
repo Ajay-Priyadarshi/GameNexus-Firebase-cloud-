@@ -1,0 +1,39 @@
+<!-- editPlan.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Edit Plan</title>
+    <link rel="stylesheet" href="/style_AE.css">
+</head>
+
+<body>
+    <form action="/managePlans/editF/<%= plan._id %>" method="post">
+        <h2 class="logo">Enter Plan Details</h2>
+
+        <label for="Plan_Name">Plan Name:</label>
+        <input type="text" id="Plan_Name" name="Plan_Name" value="<%= plan.Plan_Name %>" required>
+
+        <label for="Plan_Description">Plan Description:</label>
+        <input type="text" id="Plan_Description" name="Plan_Description" value="<%= plan.Plan_Description %>" required>
+
+        <label for="Price">Plan Price:</label>
+        <input type="number" id="Price" name="Price" value="<%= plan.Price %>" required>
+
+        <button type="submit">Submit</button>
+
+        <button type="button" onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </form>
+</body>
+
+</html>

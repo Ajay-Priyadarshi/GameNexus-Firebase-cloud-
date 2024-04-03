@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0F0E0E;
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.main-i{
+    border:#594E86 solid 3px;
+    border-style: outset;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 2.3vh;
+}
+
+.link:hover {
+    color: #594E86;
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.heading{
+  position:fixed;
+  margin: 0;
+  padding: 0;
+  top:0vh;
+
+    text-align: center;
+    color: white;
+    font-size: 4.5vh;
+    font-family: "Space Monkey";
+    background-color: #ea6e15;
+    width: 100%;
+}
+
+#usertag {
+    width: fit-content;
+    background-color: #594E86;
+    color: white;
+}
+
+.search-results {
+ 
+   margin: 30px 95px 0px 95px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.result-item:hover {
+    box-shadow: 0 0 5px rgba(254, 237, 1, 1),
+        0 0 15px rgba(254, 237, 1, 1),
+        0 0 20px rgba(254, 237, 1, 1),
+        0 0 40px rgba(254, 237, 1, 1),
+        0 0 60px rgba(255, 0, 0, 1),
+        0 0 10px rgba(255, 141, 0, 1);
+}
+
+.result-item {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-style: double;
+    border-radius: 8px;
+    border-color: rgba(254, 237, 1, 1);
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.result-item img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.result-details {
+    flex: 1;
+}
+
+.result-details h3 {
+    margin: 0;
+    color: #000000;
+}
+
+.result-details p {
+    margin: 5px 0;
+    color: #000000;
+}
+
+.last-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.last {
+    font-size: 15px;
+    color: #888;
+    margin-right: auto;
+}
+
+.time {
+    font-size: 15px;
+    color: #888;
+    margin-left: auto;
+}

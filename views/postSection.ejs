@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="/styleComment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="post-container">
+        <div class="profile-i">
+            <img src="<%= post.User_ID.userPhoto %>" alt="<%= post.User_ID.username %>">
+            <div class="username">
+                <%= post.User_ID.username %>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-media">
+                <% if (post.Content_Type === 'image') { %>
+                    <img class="post-img" src="<%= post.Content_URL %>" alt="<%= post.User_ID.username %>'s Post">
+                <% } else if (post.Content_Type === 'video') { %>
+                    <video class="post-video" controls>
+                        <source src="<%= post.Content_URL %>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                <% } %>
+            </div>
+            <div class="post-actions">
+                <a href="/like/<%= post._id %>/<%= post.User_ID._id %>" id="like-btn">
+                    <i class="fas fa-heart"><%= post.Like_Count %></i>
+                </a>
+            </div>
+            <div class="post-description">
+                <p>Descrpition : <%= post.Content_Description %></p>
+                <p class="time">
+                    <% 
+                    const timestamp = new Date(post.Content_TimeStamp);
+                    const hours = timestamp.getHours().toString().padStart(2, '0');
+                    const minutes = timestamp.getMinutes().toString().padStart(2, '0');
+                    const formattedTime = `${hours}:${minutes}`;
+
+                    const year = timestamp.getFullYear();
+                    const month = (timestamp.getMonth() + 1).toString().padStart(2, '0');
+                    const day = timestamp.getDate().toString().padStart(2, '0');
+                    const formattedDate = `${day}-${month}-${year}`;
+                    %> 
+                    <%= formattedTime %> <%= formattedDate %>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League';
+background-color: #0F0E0E;
+
+    /* Light gray background */
+    color: white;
+}
+
+.profile-header {
+
+    padding-bottom: 3vh;
+    display: flex;
+   
+
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+#del {
+    margin-left: 18.9vw;
+
+}
+
+#like {
+    margin-left: 7px;
+    margin-bottom: 3px;
+}
+
+.npost {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}
+
+#photoLabel {
+    font-family: 'Minecraft';
+}
+
+#file {
+    color: #000000;
+}
+
+.profile-header img {
+    width: 20vh;
+
+    height: 20vh;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-color: 1px solid #000000;
+}
+
+.profile-info {
+    margin-top: 3vh;
+
+    flex-grow: 1;
+    margin-bottom: 2vh;
+
+}
+
+
+
+#newPostButton {
+margin-top: 0;
+margin-bottom: 0;
+    margin-left: 24vw;
+    border-radius: 5px;
+    padding: 4px;
+    width: fit-content;
+    font-family: 'Supercell-Magic', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2vh;
+    padding: 1vh;
+    border-color: rgb(255, 255, 255);
+    border-style: outset;
+    background-color:  #ea6e15;
+
+}
+
+#newPostButton:hover {
+    background-color: #ffffff;
+    color: #ea6e15;
+    border-color: #ea6e15;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 1.5em;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Space Monkey';
+}
+
+.r1 {
+
+    margin-left: 2.5vw;
+}
+
+#data {
+
+    padding: 2.5vh 5.5vh 0vh 5.5vh;
+}
+
+/* Add this style for the liked state */
+.liked {
+    color: red;
+}
+
+.post-actions {
+    background-color: white;
+    border-radius: 2px;
+    color: #000000;
+}
+
+/* Customize the like, comment, and share icons */
+.post-actions i {
+
+    font-size: 20px;
+   padding-top: 0.8vh;
+   padding-bottom: 0.8vh;
+    cursor: pointer;
+}
+
+.main-i{
+    border: #ffffff 3px;
+    border-style: outset;
+}
+
+.profile-i {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    padding: 3px 5px 3px 2px;
+}
+
+.pi {
+    height: 3.5vh;
+    width: 3.5vh;
+}
+
+.profile-i img {
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-i .username {
+    font-weight: bold;
+
+}
+
+.counts {
+    margin-top: 2vh;
+    font-size: 1.5em;
+    display: flex;
+    width: 90%;
+}
+
+.img-i{
+    border:#594E86 solid 2px;
+    border-style: outset;
+}
+
+.counts p {
+    margin: 0;
+}
+
+.multiline-text {
+    font-family: "League";
+    padding-left: 5px;
+   border:#ffffff solid 2px;
+   border-radius: 10px;
+    padding-top: 1vh;
+    width: 99%;
+    background-color: #ea6e15;
+
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
+
+.post-img {
+    height: 65vh;
+    /* Set your desired fixed height */
+    width: 43vh;
+    /* Set your desired fixed width */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-video {
+    height: 65vh;
+    /* Set your desired fixed height */
+    width: 43vh;
+    /* Set your desired fixed width */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-container {
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#like-btn{
+    margin-left: 4px;
+    color: #000000;
+}
+
+#cmt-btn{
+    margin-left: 4px;
+    color: #000000;
+}
+
+.delete-btn {
+    margin: 2px 0px 2px 4px;
+
+    color: #000000;
+}
+
+.post img,
+.post video {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.post-video video {
+    object-fit: cover; /* Use 'cover' for videos to fill the container */
+}

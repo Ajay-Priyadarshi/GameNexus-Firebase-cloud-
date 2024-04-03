@@ -1,0 +1,45 @@
+<!-- allChats.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="styleChatIndex.css">
+</head>
+<body>
+    <h1 class="heading">Chat Messages</h1>
+    <div class="search-results">
+        <% recentChats.forEach(chat => { %>
+            <div class="result-item" >
+                <img class="main-i" src="<%= chat.user.userPhoto %>" alt="<%= chat.user.username %>">
+                <div class="result-details">
+                    <a class="link" href="/chat/personal/<%= chat.user._id %>">
+                        <%= chat.user.username %>
+                    </a>
+                    <div class="last-message">
+                        <span class="last">
+                            <% if (chat.latestMessage) { %>
+                                <%= chat.latestMessage.Message_Description %>
+                            <% } else { %>
+                                No messages yet
+                            <% } %>
+                        </span>
+                    </div>
+                    <div class="time">
+                        <span class="time">
+                            <% if (chat.latestMessage) { %>
+                                <%= moment(chat.latestMessage.Message_Timestamp).format('HH:mm') %>
+                            <% } %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</body>
+
+</html>

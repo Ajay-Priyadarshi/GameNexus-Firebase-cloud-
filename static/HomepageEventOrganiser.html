@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="name">
+            <img class="img-logo" src="/assets/10.png" >
+            <h1 class="logo">Game Nexus</h1>
+</div>
+        <a href="#" onclick="loadPage('feed')" id="nvoptions" class="option"><i class="fas fa-home"></i> Home</a>
+
+        <a href="#" onclick="loadPage('search')" id="nvoptions" class="option"><i class="fas fa-search"></i> Search</a>
+
+        <a href="#" onclick="loadPagein('events', 'org')" id="nvoptions" class="option"><i
+                class="far fa-calendar-alt"></i> Events</a>
+                <a href="#" onclick="loadPage('chat')" id="nvoptions" class="option"><i class="fas fa-comments"></i>Chat</a>
+
+        <div class="option" id="nvoptions">
+
+            <a href="#" onclick="loadPage('profile')" id="nvoptions" class="prb"><i class="far fa-user"></i>
+                Profile</a><button onclick="toggleDropdown('ProfileDropdown')" class="dpd">&#9662;</button>
+            <div class="dropdown" id="ProfileDropdown">
+                <ul>
+                    <li><button onclick="loadPagein('profile', 'editProfile')" class="edit-profile" id="buttons">Edit
+                            Profile</button></li>
+                    <li><button onclick="loadPagein('profile', 'del')" class="delete-profile-button" id="buttons">Delete
+                            Profile</button></li>
+                </ul>
+            </div>
+        </div>
+
+      
+        
+        <a href="#" onclick="logout()" class="option" id="nvoptions">
+            <i class="fas fa-sign-out-alt"></i>Logout</a>
+
+    </nav>
+
+    <section class="mainc">
+        <iframe id="content" src="feed" width="100%" height="100%" frameborder="0"></iframe>
+    </section>
+    <section class="options-section">
+        <iframe id="options-content" src="Post_options.html" width="100%" height="100%" frameborder="0"></iframe>
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

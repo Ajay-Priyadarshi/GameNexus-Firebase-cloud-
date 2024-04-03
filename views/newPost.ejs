@@ -1,0 +1,35 @@
+<!-- newPost.ejs -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>New Post Form</title>
+    <link rel="stylesheet" href="style_AEL.css">
+</head>
+
+<body>
+    <form action="/post/create" method="POST" enctype="multipart/form-data">
+
+        <label for="postImg" id="photoLabel">Add File</label>
+        <input type="file" id="postImg" name="media" accept="image/*, video/*">
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="Content_Description" value="">
+
+        <input type="hidden" name="User_ID" value="<%= user._id %>">
+        <button type="submit">Create Post</button>
+
+        <button type="button" onclick="goBack()">Go Back</button>
+
+    </form>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

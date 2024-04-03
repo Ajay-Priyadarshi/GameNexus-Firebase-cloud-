@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League';
+    background-color: #0F0E0E;
+    /* Light gray background */
+    color: white;
+}
+
+.profile-header {
+
+    padding-bottom: 3vh;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    /* Light gray border */
+
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+#del {
+    margin-left: 18.9vw;
+
+}
+
+#like {
+    margin-left: 7px;
+    margin-bottom: 3px;
+}
+
+.npost {
+    margin: 10px;
+}
+
+#photoLabel {
+    font-family: 'Minecraft';
+}
+
+#file {
+    color: #000000;
+}
+
+.profile-header img {
+    width: 20vh;
+
+    height: 20vh;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-color: 1px solid #000000;
+}
+
+.profile-info {
+    margin-top: 3vh;
+
+    flex-grow: 1;
+    margin-bottom: 2vh;
+
+}
+
+.time{
+    background-color: white;
+    color: #000000;
+    max-width: fit-content;
+}
+
+#newPostButton {
+    padding: 4px;
+    width: fit-content;
+    margin-right: 4px;
+    font-family: 'Supercell-Magic', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    padding: 1vh;
+    background-color: #3D3D3D;
+}
+
+#newPostButton:hover {
+    background-color: #242424;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 1.5em;
+
+}
+
+input[type="text"] {
+    position:fixed;
+    top:94%;
+    margin-left: 5px;
+    width: 76.5%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    background-color: white;
+    color: rgb(0, 0, 0);
+ 
+}
+
+
+#send-comment-btn{
+    position:fixed;
+    top:92.72%;
+    left: 78.5%;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Space Monkey';
+}
+
+.r1 {
+
+    margin-left: 2.5vw;
+}
+
+#data {
+
+    padding: 2.5vh 5.5vh 0vh 5.5vh;
+}
+
+/* Add this style for the liked state */
+.liked {
+    color: red;
+}
+
+.post-actions {
+    background-color: white;
+    border-radius: 2px;
+    color: #000000;
+}
+
+
+/* Customize the like, comment, and share icons */
+.post-actions i {
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#like-btn,
+#cmt-btn {
+    color: #000000;
+    margin: 0;
+}
+
+#cmt-btn {
+    margin-right: 26vw;
+}
+
+.profile-i {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    padding: 3px 5px 3px 2px;
+}
+
+.pi {
+    height: 3.5vh;
+    width: 3.5vh;
+}
+
+.profile-i img {
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-i .username {
+    font-weight: bold;
+
+}
+
+.counts {
+    margin-top: 2vh;
+    font-size: 1.5em;
+    display: flex;
+    width: 90%;
+}
+
+.counts p {
+    margin: 0;
+}
+
+#send-comment-btn{
+    padding: 4px;
+    width: fit-content;
+    margin-left: 1vw;
+    font-family: 'Supercell-Magic', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    padding: 1vh;
+    border-radius: 5px;
+    background-color: #7B2CBF;
+    margin-right: 1vw;
+    border-color: rgb(0, 0, 0);
+}
+
+#send-comment-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    border-color: #7B2CBF;
+}
+
+.new-comment{
+  
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.comment{
+    border: #ddd 2px;
+
+    border-style: outset;
+    
+}
+
+#cm{
+    margin-left: 2vw;
+}
+
+.us-name{
+    padding: 8px;
+    border-radius: 6px;
+    width: fit-content;
+    background-color: #7B2CBF;
+    color: white;
+}
+
+.multiline-text {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 1vh;
+    width: 100%;
+    background-color: #4c2265;
+
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
+
+.post-img,
+.post-video {
+    background-color: #000000;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-container {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    width: fit-content;
+    padding: 3px 10px;
+    background-color: #594E86;
+
+    color: white;
+    margin: 10px;
+    font-size: 2vh;
+}
+
+.opt-r {
+    border-style: outset;
+    border-color: #ddd;
+}
+
+.delete-btn {
+
+    margin-left: 20.9vw;
+    color: #000000;
+}
+
+.post img,
+.post video {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
+}
+
+.post-video video {
+    object-fit: cover; /* Use 'cover' for videos to fill the container */
+}

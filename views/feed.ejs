@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Dummy Post Feed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style_Post.css">
+</head>
+
+<body>
+
+    <h2 class="page-info">POST FEED</h2>
+    <br>
+
+    <div class="post-feed">
+        <% userPosts.forEach(post=> { %>
+            <div class="post">
+                <div class="profile-info">
+                    <img class="img-i" src="<%= post.User_ID.userPhoto %>" alt="<%= post.User_ID.username %>">
+                    <div class="username">
+                        <%= post.User_ID.username %>
+                    </div>
+                </div>
+                <div class="post-media">
+                    <% if (post.Content_Type === 'image') { %>
+                        <img class="post-img" src="<%= post.Content_URL %>" alt="Post">
+                    <% } else if (post.Content_Type === 'video') { %>
+                        <video class="post-video" controls>
+                            <source src="<%= post.Content_URL %>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    <% } %>
+                </div>
+                <div class="post-actions">
+                    <a href="/like/<%= post._id %>/<%= post.User_ID._id %>" id="like-btn">
+                        <i class="fas fa-heart">
+                            <%= post.Like_Count %>
+                        </i>
+                    </a>
+                    <a href="#" onclick="postComment('<%= post._id %>')" id="cmt-btn">
+                        <i class="fas fa-comment">
+                            <%= post.Comment_Count %>
+                        </i>
+                    </a>
+                    <script src="index.js"></script>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+</body>
+
+</html>

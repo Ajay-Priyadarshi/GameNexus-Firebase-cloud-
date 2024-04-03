@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #ffffff;
+      background-color: #1b1b1b;
+    }
+
+    .plan-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+    }
+
+    .plan {
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #000000;
+      color: rgb(255, 255, 255);
+      background-color: #3a3a3a;
+      border: #b0fffa;
+      border-style: outset;
+      border-radius: 8px;
+      text-align: center;
+
+
+    }
+
+    .plan input {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-family: 'Minecraft';
+      text-align: center;
+    }
+
+    #pay {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+
+    button {
+      margin-left: 45vw;
+      font-size: 2vh;
+      margin-top: 10px;
+      background-color: #000000;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: #156aea;
+      border-style: outset;
+      align-items: center;
+    }
+
+    .options {
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .a1 {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      box-sizing: border-box;
+      border-style: outset;
+      padding: 8px;
+      border-color: #156aea;
+      border-radius: 5px;
+      margin: 10px;
+      background-color: #000000;
+      margin-top: 5vh;
+    }
+
+    select {
+      padding: 5px;
+    }
+
+    .op {
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-container {
+      margin-top: 10px;
+    }
+
+    #b1 {
+      margin-left: 37%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+    }
+  </style>
+
+  <title>Premium</title>
+</head>
+
+<body>
+    <h3>Existing plan : lol</h3>
+  <h1>Plans</h1>
+  <div class="plan-container">
+    <% plans.forEach(plan=> { %>
+      <div class="plan">
+        <label for="<%= plan._id %>"><strong>Type : <%= plan.Plan_Name %></strong></label>
+        <p>Account Type : <%= plan.accountType %>
+        </p>
+        <p>Description : <%= plan.Plan_Description %>
+        </p>
+        <p>Price : <%= plan.Price %>
+        </p>
+      </div>
+      <% }); %>
+  </div>
+
+  <div class="options">
+    <button><a class="op" href="/payment">Make Payment</a></button>
+  </div>
+
+</body>
+
+</html>

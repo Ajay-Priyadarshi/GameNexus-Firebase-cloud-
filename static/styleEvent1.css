@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League';
+    background-color: #0F0E0E;
+    /* White background */
+    color: #ffffff;
+    /* Black text color */
+}
+
+
+
+.reg {
+    margin-top: 4vh;
+    margin-left: 8vh;
+    font-size: 1.8vh;
+
+}
+
+.reg a {
+
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Monkey";
+    text-align: center;
+  background-color: #ea6e15;
+    font-size: 5vh;
+
+}
+
+.reg a:hover {
+    text-shadow: 0 0 5px rgba(254, 237, 1, 1),
+        0 0 15px rgba(255, 0, 0, 1),
+        0 0 20px rgba(255, 141, 0, 1);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opt {
+    margin-top: 4vh;
+    margin-left: 4vh;
+}
+
+.a1 {
+    text-decoration: none;
+
+    padding: 1vw;
+    background-color: #7B2CBF;
+    color: white;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+    width: fit-content;
+    height: fit-content;
+}
+
+.a1:hover {
+    background-color: black;
+    border-color: #7B2CBF;
+}
+
+.search-container {
+    background-color: #0F0E0E;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+}
+
+.search-icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    /* Black border */
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    outline: none;
+    width: 70vw;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-item {
+    background-color: #10002B;
+    display: flex;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    margin-top: 3vh;
+    width: 100%;
+    /* Utilize full width of the page */
+}
+
+.event-image {
+    
+        border:rgba(254, 237, 1, 1) solid 2px;
+        border-style: outset;
+    
+    margin-top: 1vh;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.event-details {
+    border-style: double;
+    border-radius: 4vh;
+    border-color: rgba(254, 237, 1, 1);
+    padding: 0.8vh 4vh 2vh 4vh;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 70px);
+    /* Adjust as needed */
+}
+
+#addevent {
+    margin-top: 3vh;
+}
+
+.prize-money {
+    margin-top: 1vh;
+
+}
+
+.event-details:hover {
+    box-shadow: 0 0 5px rgba(254, 237, 1, 1),
+        0 0 15px rgba(255, 0, 0, 1),
+        0 0 20px rgba(255, 141, 0, 1);
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.user-name {
+    margin: 4vh 6vh 2vh 3vh;
+}
+
+.event-name {
+    margin: 3.5vh 6vh 2vh 2vh;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: #10002B;
+    background-color: #ffffff;
+    padding-top: 2px;
+    width: max-content;
+    max-height: 2.5vh;
+}
+
+.event-info {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.prize-money {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+#mid-date {
+    margin-top: 0.5vh;
+    margin-bottom: 1vh;
+}
+
+
+
+.event-date {
+
+    color: rgb(255, 255, 255);
+    text-align: right;
+    font-size: 15px;
+
+
+}

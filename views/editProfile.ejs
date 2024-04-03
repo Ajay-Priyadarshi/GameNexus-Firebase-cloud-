@@ -1,0 +1,38 @@
+<!-- editProfile.ejs -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Edit Profile Form</title>
+    <link rel="stylesheet" href="style_AEL.css">
+</head>
+
+<body>
+    <form action="/profile/updateProfile" method="POST" enctype="multipart/form-data">
+        <label for="UserName">Username:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>" readonly required>
+
+        <label for="photoInput" id="photoLabel">New Profile Photo</label>
+        <input type="file" id="userPhoto" name="userPhoto" accept="image/*">
+
+        <label for="Abio">Achievement bio:</label>
+        <input type="text" id="bio" name="bio" value="<%= user.bio %>" required>
+
+        <label for="Req">Requirements:</label>
+        <input type="text" id="requirements" name="requirements" value="<%= user.requirements %>">
+
+        <button type="submit">Update</button>
+
+        <button onclick="goBack()">Go Back</button>
+    </form>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

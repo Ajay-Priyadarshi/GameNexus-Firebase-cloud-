@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <title>Followers</title>
+  <style>
+
+        body {
+            font-family:"League";
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        h1{
+          color: white;
+          font-family: "Space Monkey";
+        }
+
+        header {
+            font-family: 'Space Monkey';
+            text-align: center;
+        }
+
+        .followers-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #000000;
+       
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+
+        ul {
+            padding-bottom: 1vh;
+            padding-left: 2vh;
+            padding-right: 2vh;
+            list-style: none;
+            margin: 0;
+           
+        }
+
+
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1vh;
+            padding-left: 2vh;
+            padding-right: 2vh;
+            margin: 0;
+            background-color: #000000;
+            border-color:#ea6e15;
+            border-style: outset;
+            border-radius: 5px;
+         margin-top: 1.5vh;
+         margin-left: 0;
+         margin-right: 0;
+            margin-bottom: 0.5vh;
+        }
+
+        li:hover{
+            background-color: #222222;
+            border-color:#0dff00;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-top: 1vh;
+            
+        }
+
+        .profile-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile-photo:hover {
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+
+        .username {
+            margin-right: 10px;
+            color: white;
+        }
+
+        .followers-container{
+border-color:#7B2CBF;
+border-style: outset;
+}
+
+.followers-container:hover{
+border-color:#0dff00;
+border-style: outset;
+}
+
+        .username:hover {
+
+            border-radius: 0cm;
+            background-color: #555;
+      
+            color: white;
+        }
+
+        button {
+            text-decoration: none;
+            font-family:"League";
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #000000;
+            border-color: #7B2CBF;
+            border-style: outset;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        a{
+            text-decoration:none;
+            color: white;
+        }
+
+ 
+
+        button:hover {
+            background-color: #7B2CBF;
+    border-color: #000000;
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>List of Followers</h1>
+  </header>
+
+  <div class="followers-container">
+    <ul>
+      <% followers.forEach(follower=> { %>
+        <li>
+          <div class="user-info">
+            <img class="profile-photo" src="<%= follower.Follower_ID.userPhoto %>"
+              alt="User Photo">
+            <a href="/profile/<%= follower.Follower_ID._id %>">
+              <span class="username">
+                <%= follower.Follower_ID.username %>
+              </span>
+            </a>
+          </div>
+          <button><a class="removeBtn" href="/follow/removeFollower/<%= follower.Follower_ID._id %>">Remove</a></button>
+        </li>
+        <% }); %>
+    </ul>
+    <!-- <a href="/goback">Go Back</a> -->
+  </div>
+</body>
+
+</html>

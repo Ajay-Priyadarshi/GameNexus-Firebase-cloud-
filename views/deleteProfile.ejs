@@ -1,0 +1,25 @@
+<!-- deleteProfile.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleDeleteProfile.css">
+</head>
+
+<body>
+
+    <div class="delete-profile-container">
+        <h2>Delete Profile</h2>
+        <form action="/profile/delete" method="post">
+            <label for="securityAnswer">Security Question: <%= user.securityQuestion %></label>
+            <input type="text" id="securityAnswer" name="securityAnswer" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

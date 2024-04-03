@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'League';
+      margin: 20px;
+      color: #ffffff;
+      background-color: #1b1b1b;
+    }
+
+    .plan-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+    }
+
+    .plan {
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #000000;
+      color: rgb(255, 255, 255);
+      background-color: #3a3a3a;
+      border: #156aea;
+      border-style: outset;
+      border-radius: 8px;
+      text-align: center;
+
+
+    }
+
+    .plan:hover{
+      border: #22ff00;
+      border-style: outset;
+      border-radius: 8px;
+    }
+
+    .plan input {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-family: 'Minecraft';
+      text-align: center;
+    }
+
+    #pay {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+
+    button {
+      font-family: 'League';
+      margin-left: 45vw;
+      font-size: 2vh;
+      margin-top: 10px;
+      background-color: #000000;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: #156aea 3px;
+      border-style: outset;
+      align-items: center;
+    }
+
+    button:hover{
+      background-color: #156aea;
+      border-radius: 10px;
+      border: #000000 3px;
+      border-style: outset;
+    }
+
+    .options {
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .a1 {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      box-sizing: border-box;
+      border-style: outset;
+      padding: 8px;
+      border-color: #156aea;
+      border-radius: 5px;
+      margin: 10px;
+      background-color: #000000;
+      margin-top: 5vh;
+    }
+
+    .a1:hover{
+      background-color: #156aea;
+      border-radius: 10px;
+      border: #000000 3px;
+      border-style: outset;
+    }
+
+    select {
+      padding: 5px;
+    }
+
+    .op {
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-container {
+      margin-top: 10px;
+    }
+
+    #b1 {
+      margin-left: 37%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+    }
+  </style>
+
+  <title>Mange Plans</title>
+</head>
+
+<body>
+  <h1>Plans</h1>
+  <div class="plan-container">
+    <% plans.forEach(plan=> { %>
+      <div class="plan">
+        <label for="<%= plan._id %>"><strong>Name : <%= plan.Plan_Name %></strong></label>
+        <p>Account Type : <%= plan.accountType %>
+        </p>
+        <p>Description : <%= plan.Plan_Description %>
+        </p>
+        <p>Price : <%= plan.Price %>
+        </p>
+        <a href="#" class="a1" onclick="window.location.href = '/managePlans/edit/<%= plan._id %>';">
+          <i class="fas fa-search"></i> Edit </a>
+        <a href="#" class="a1" onclick="window.location.href = '/managePlans/delete/<%= plan._id %>';">
+          <i class="fas fa-search"></i> Delete </a>
+      </div>
+      <% }); %>
+  </div>
+
+  <div class="options">
+    <button><a class="op" href="/managePlans/add">Add Plans</a></button>
+    <!-- <button><a class="op" href="/admin/dashboard">Go Back</a></button> -->
+  </div>
+
+</body>
+
+</html>

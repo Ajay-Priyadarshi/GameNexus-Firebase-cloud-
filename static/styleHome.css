@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Supercell-Magic', sans-serif;
+    background-color: #000000;
+    /* White background for a clean look */
+    color: #ffffff;
+    /* Dark text color */
+}
+
+.name{
+    display: flex;
+    flex-direction:row;
+}
+
+.img-logo{
+    height: 12vh;
+    width: 12vh;
+    padding: 0;
+    margin: 0vh 0vh 0vh 0vh;
+    
+}
+
+link[rel="icon"] {
+    width: 200px;
+    height: 200px;
+}
+
+.logo {
+    font-family: 'Space Monkey';
+    color: white;
+    text-align: center;
+    font-size: 2.7vh;
+    text-shadow: 0 0 10px #87CEEB;
+    margin: 4.8vh 0vh 0vh 0vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.logo:hover {
+    text-shadow: 0 0 5px rgba(254, 237, 1, 1),
+        0 0 15px rgba(254, 237, 1, 1),
+        0 0 20px rgba(254, 237, 1, 1),
+        0 0 40px rgba(254, 237, 1, 1),
+        0 0 60px rgba(255, 0, 0, 1),
+        0 0 10px rgba(255, 141, 0, 1);
+}
+
+.dpd {
+    background-color: #000000;
+    color: white;
+}
+
+#nvoptions {
+    text-align: center;
+    text-decoration: none;
+}
+
+#nvoptions:hover {
+    background-color: rgba(254, 237, 1, 255);
+    color: #000000;
+}
+
+nav {
+    font-size: 2.5vh;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: #000000;
+    /* Light gray color for the navigation background */
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow for depth */
+}
+
+nav h1.logo {
+    margin-bottom: 20px;
+    /* Add spacing between the logo and links */
+    color: #ffffff;
+    /* Dark text color for the logo */
+}
+
+.option {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    /* Dark text color for navigation links */
+    background-color: #000000;
+    /* Light gray background color for navigation links */
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+    /* Smooth transition on hover */
+}
+
+nav a:hover {
+    background-color: #000000;
+    /* Slightly darker gray on hover for navigation links */
+}
+
+section {
+    float: left;
+    width: 60%;
+    /* Reduced width of the second section to 60% */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #333;
+    /* Dark border color for separation */
+    transition: border-left-color 0.3s;
+    /* Smooth transition on hover */
+    background-color: #000000;
+    /* White background for the content section */
+}
+
+section:hover {
+    border-left-color: #555;
+    /* Darker border color on hover for the section */
+}
+
+.options-section {
+    float: left;
+    width: 20%;
+    /* New third section with 20% width */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #000000;
+    /* Light gray color for the new section */
+    border-left: 1px solid #333;
+    /* Dark border color for differentiation */
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow for depth */
+}
+
+h1 {
+    color: #ffffff;
+    /* Dark text color for headers */
+}
+
+iframe {
+    border: none;
+    /* Remove border from iframes */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border-radius: 3px;
+    margin: 3px;
+    background-color: rgb(27, 27, 27);
+}
+
+.option {
+
+    margin: 10px 10px 10px 5px;
+}
+
+
+
+.event {
+    color: white;
+    padding-right: 10px;
+}
+
+#add-event,
+#delete-event,
+#registerOption,
+#bookmarksOption,
+#EventOption {
+    width: 90%;
+    background-color: #594E86;
+    color: #ffffff;
+
+    margin-bottom: 5px;
+}
+
+#registerOption {
+    margin-top: 5px;
+}
+
+#photoLabel {
+    border: #000000;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 90%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    width: 20%;
+    border-radius: 3px;
+    background-color: rgb(27, 27, 27);
+}
+
+.dropdown a {
+
+    text-decoration: none;
+    display: block;
+    color: #333;
+    /* Dark text color for dropdown links */
+    border-bottom: 1px solid #ddd;
+    /* Add a border between list items */
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+    /* Remove border on the last list item */
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+    /* Light gray background on hover */
+}
+
+.show {
+    display: block;
+}
+
+#buttons {
+    background-color: #594E86;
+    color: white;
+    width: 90%;
+    margin: 4px;
+}
+
+.delete-profile-button {
+    margin-bottom: 5px;
+}
+
+.prb {
+    margin-right: 10px;
+    color: white;
+}

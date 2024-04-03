@@ -1,0 +1,49 @@
+<!-- selectPlan.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/auth/styleSelect.css">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Select Plan</title>
+</head>
+
+<body>
+    <h1>Select Plan</h1>
+
+    <form method="post" action="/auth/select-plan">
+
+        <input type="hidden" name="newUser" value="<%= JSON.stringify(newUser) %>">
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan Name</th>
+                    <th>Plan Description</th>
+                    <th>Price</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (const plan of userPlans) { %>
+                    <tr>
+                        <td><%= plan.Plan_Name %></td>
+                        <td><%= plan.Plan_Description %></td>
+                        <td>$<%= plan.Price %></td>
+                        <td>
+                            <label>
+                                <input type="radio" name="planId" value="<%= plan._id %>" required>
+                            </label>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <button type="submit">Make Payment</button>
+    </form>
+</body>
+
+</html>

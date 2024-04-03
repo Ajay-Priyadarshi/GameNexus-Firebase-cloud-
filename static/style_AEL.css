@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url('../assets/main_l_img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.logo {
+    font-family: 'Space Monkey';
+    color: #000000;
+    background-color: rgba(254, 237, 1, 1);
+    width: fit-content;
+}
+
+form {
+
+    margin-left: 5vw;
+    margin-top: 20vh;
+    padding: 20px;
+    width: 500px;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+label {
+    font-size: 2vh;
+    font-family: 'Minecraft';
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
+
+input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70%;
+}

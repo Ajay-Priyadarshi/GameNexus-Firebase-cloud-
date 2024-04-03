@@ -1,0 +1,47 @@
+<!-- editPlan.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Edit Event</title>
+    <link rel="stylesheet" href="/style_AE.css">
+</head>
+
+<body>
+    <form action="/events/editF/<%= event._id %>" method="post">
+        <h2 class="logo">Edit Event Details</h2>
+
+        <label for="Event_Name"><b>Event Name</b></label>
+        <input type="text" placeholder="Enter Event Name" name="Event_Name" value="<%= event.Event_Name %>" required>
+
+        <label for="Event_Start_Date"><b>Event Start Date</b></label>
+        <input type="date" name="Event_Start_Date" value="<%= event.Event_Start_Date.toISOString().split('T')[0] %>"
+            required>
+
+        <label for="Event_End_Date"><b>Event End Date</b></label>
+        <input type="date" name="Event_End_Date" value="<%= event.Event_End_Date.toISOString().split('T')[0] %>"
+            required>
+
+        <label for="Price"><b>Event Price Pool</b></label>
+        <input type="text" placeholder="Enter Event Price pool" name="Price" value="<%= event.Price %>" required>
+
+        <label for="Registration_Link"><b>Registration Link</b></label>
+        <input type="text" placeholder="Link" name="Registration_Link" value="<%= event.Registration_Link %>" required>
+
+        <button type="submit">Update Event</button>
+
+        <button type="button" onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </form>
+</body>
+
+</html>

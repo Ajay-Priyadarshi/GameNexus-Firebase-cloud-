@@ -1,0 +1,193 @@
+body {
+    background: url('../assets/main_l_img.jpg') no-repeat center center fixed;
+    color: #ffffff;
+    font-family: 'Minecraft';
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: 18px;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+form {
+    margin-left: 13vw;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: #382c59;
+
+}
+
+input {
+    height: 5vh;
+    width: 30vw;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: rgba(254, 237, 1, 255);
+    border-style: double;
+    border-color: white;
+    color: black;
+    box-shadow: 0 0 5px #ffffff;
+    border-radius: 25px;
+    font-size: 2.7vh;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+
+}
+
+button {
+    font-family: 'Minecraft';
+    font-weight: bold;
+    border-radius: 100px;
+    background-color: #382c59;
+    height: fit-content;
+    width: 30vw;
+    /* Take up full width */
+    padding: 3px;
+    /* Vertical padding */
+    font-size: 18px;
+    color: white;
+    font-family: 'Minecraft';
+    border-style: double;
+    border-color: white;
+    box-shadow: 0 0 5px #ffffff;
+    margin-top: 10px;
+
+
+}
+
+button:hover {
+
+
+    text-shadow: 0 0 5px #ffffff;
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+}
+
+#photoInput {
+
+    display: none;
+}
+
+#photoLabel {
+    font-family: 'Minecraft';
+    height: fit-content;
+    width: 29.5vw;
+    font-weight: bold;
+    border-radius: 100px;
+    text-align: center;
+    background-color: #382c59;
+    /* Vertical padding */
+    font-size: 18px;
+    text-shadow: none;
+    color: white;
+    border-style: double;
+    border-color: white;
+    box-shadow: 0 0 5px #ffffff;
+    margin-top: 8px;
+}
+
+#photoLabel:hover {
+    text-shadow: 0 0 5px #ffffff;
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+}
+
+a {
+    font-family: 'Minecraft';
+    text-decoration: none;
+    color: white;
+}
+
+
+.previous {
+    font-family: 'Minecraft';
+    font-weight: bold;
+    background-color: red;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Aquire';
+    text-align: center;
+    border-style: double;
+    border-color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 13vw;
+}
+
+.previous:hover {
+    text-shadow: 0 0 5px #ffffff;
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+}
+
+
+
+#accountType {
+    font-family: 'Minecraft';
+    font-weight: bold;
+    border-radius: 100px;
+    text-align: center;
+    background-color: #382c59;
+    box-shadow: 0 0 5px #ffffff;
+    color: white;
+    border-style: double;
+    border-color: white;
+    padding: 2px 0px 0px 0px;
+    margin-bottom: 5px;
+}
+
+#accountType:focus {
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+
+}
+
+
+
+
+
+.inbox:focus {
+
+    outline: none;
+    box-shadow: 0 5px #ffffff, 0 0 15px #c1c1c1, 0 0 20px #ffffff, 0 0 40px #ff8d00;
+    border-color: white;
+}
+
+.DETAILS {
+    background-color: #645F7D;
+    padding: 10px 6px 4px 8px;
+    border-radius: 10px;
+    border-style: double;
+    border-color: white;
+}
+
+.details {
+    text-shadow: 0 0 20px #B0C4DE;
+    margin-left: 13vw;
+}

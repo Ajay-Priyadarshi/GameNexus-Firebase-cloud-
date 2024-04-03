@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="/styleComment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="post-container">
+
+            <div class="comments-section">
+                <h2>Comments</h2>
+                <% comments.forEach(comment=> { %>
+                    <div class="comment" id="comment-<%= comment._id %>">
+                        <p>
+                            <% 
+                            const timestamp = new Date(comment.Comment_Timestamp);
+                            const hours = timestamp.getHours();
+                            const minutes = timestamp.getMinutes();
+                            const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+                            
+                            const year = timestamp.getFullYear();
+                            const month = (timestamp.getMonth() + 1).toString().padStart(2, '0');
+                            const day = timestamp.getDate().toString().padStart(2, '0');
+                            const formattedDate = `${day}-${month}-${year}`;
+                            %> 
+                            <p class="us-name" id="cm"> <%= comment.User_ID.username %></p> <p class="cmt-des" id="cm"> <%= comment.Comment_Description %></p> <p class="time" id="cm"> <%= formattedTime %>  <%= formattedDate %></p>
+                        </p>
+                    </div>
+                    <% }); %>
+            </div>
+<br>
+<br>
+<br>
+<br>
+
+            <div class="new-comment">
+                <form action="/comment/create" method="post">
+
+                    <input type="text" id="Comment_Description" name="Comment_Description" placeholder="Enter comment" required>
+
+                    <input type="hidden" name="Content_ID" value="<%= post._id %>">
+
+                    <button id="send-comment-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
